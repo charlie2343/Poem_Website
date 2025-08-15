@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Site — Home</title>
+  <meta name="description" content="A clean, fast, no-build personal site template for GitHub Pages." />
+  <link rel="preload" as="style" href="assets/style.css" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
+  <meta name="color-scheme" content="light dark" />
+  <script>
+    // Respect user preference early (no flash)
+    (function() {
+      try {
+        const key = 'theme';
+        const saved = localStorage.getItem(key);
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = saved || (prefersDark ? 'dark' : 'light');
+        document.documentElement.dataset.theme = theme;
+      } catch(e){}
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header container">
+    <div class="brand">
+      <a href="index.html" class="brand-title">My Site</a>
+      <span class="brand-subtitle">builder • runner • math enjoyer</span>
+    </div>
+
+    <nav class="nav" aria-label="Main">
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="nav-menu" class="nav-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="posts.html">Posts</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌓</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero container">
+    <div class="hero-text">
+      <h1>Hi, I'm You.</h1>
+      <p>A minimal, fast, and elegant starter you can host on GitHub Pages without Jekyll or build steps.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#projects">See Projects</a>
+        <a class="button" href="posts.html">Read Posts</a>
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+    <section id="about" class="container section">
+      <h2>About</h2>
+      <p>
+        I'm a problem solver who likes math, robotics, and cold plunges. This template takes design cues from clean Jekyll blogs:
+        strong typography, generous white space, and a left-to-right reading rhythm.
+      </p>
+      <ul class="feature-list">
+        <li>⚡ No build tools — pure HTML/CSS/JS</li>
+        <li>🌓 Light/Dark theme with <code>localStorage</code></li>
+        <li>📱 Mobile-first, accessible nav</li>
+        <li>📝 Blog-style posts powered by a simple JSON file</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="container section">
+      <div class="section-header">
+        <h2>Projects</h2>
+        <a class="link" href="posts.html#tag=project">view all</a>
+      </div>
+      <div id="project-grid" class="grid"></div>
+    </section>
+
+    <section id="contact" class="container section">
+      <h2>Contact</h2>
+      <p>Say hi at <a href="mailto:you@example.com">you@example.com</a>. You can also find me on
+        <a href="https://github.com/your-handle">GitHub</a> or <a href="https://www.linkedin.com/">LinkedIn</a>.
+      </p>
+      <form class="contact-form" action="https://formspree.io/f/your-id" method="POST">
+        <label>
+          Your email
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <button class="button primary" type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <div>© <span id="year"></span> Your Name</div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="posts.html">Posts</a>
+      <a href="#contact">Contact</a>
+      <a href="feed.xml" aria-disabled="true">RSS</a>
+    </div>
+  </footer>
+
+  <script src="assets/main.js" defer></script>
+</body>
+</html>

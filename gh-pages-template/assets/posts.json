@@ -1,0 +1,34 @@
+[
+  {
+    "id": "hello-world",
+    "title": "Hello, world",
+    "date": "2025-08-01",
+    "tags": [
+      "note"
+    ],
+    "excerpt": "A tiny first post to test the template.",
+    "content": "<p>This site is a single-page friendly template you can host on GitHub Pages with no build step. Edit <code>assets/posts.json</code> to add posts.</p>"
+  },
+  {
+    "id": "drawing-robot",
+    "title": "Polar Drawing Robot",
+    "date": "2025-07-20",
+    "tags": [
+      "project",
+      "robotics"
+    ],
+    "excerpt": "Notes from building a mural robot using stepper motors and GRBL.",
+    "content": "<p>I built a robot that draws murals using polar coordinates, a TSP path optimizer, and GRBL. Future improvements: servo Z control and better cable management.</p>"
+  },
+  {
+    "id": "cold-plunge",
+    "title": "What Cold Plunges Taught Me About Focus",
+    "date": "2025-06-11",
+    "tags": [
+      "note",
+      "health"
+    ],
+    "excerpt": "Short reflections from doing cold plunges after runs.",
+    "content": "<p>Breath, focus, and consistency \u2014 the same tools for math, writing, and training.</p>"
+  }
+]
